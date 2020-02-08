@@ -1,8 +1,9 @@
 import React from 'react';
+import {location} from 'react-icons/io';
 
 const LocationPinComponent = ({text}) => {  
    return(
-        <div className="fas fa fa-location-arrow"></div>
+        <location />
     )
 }
 
