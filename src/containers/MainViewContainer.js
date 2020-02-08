@@ -3,7 +3,6 @@ import HomeScreenContainer from './HomeScreenContainer';
 import QuizPageContainer from './QuizPageContainer';
 import MapPageContainer from './MapPageContainer';
 
-
 class MainViewContainer extends React.Component {
 	state = {
         layout: 'home' // Can have home; map; quiz
