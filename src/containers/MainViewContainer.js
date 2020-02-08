@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeScreenContainer from './HomeScreenContainer';
+import MapPageContainer from './MapPageContainer';
 
 class MainViewContainer extends React.Component {
 	listItems = [];
@@ -9,7 +10,7 @@ class MainViewContainer extends React.Component {
 			<div className="row">
 				<div className="col-sm-3"></div>
 				<div className="container bg-light col-sm-6">
-					<HomeScreenContainer/>
+					<MapPageContainer/>
 				</div>
 				<div className="col-sm-3"></div>
 			</div>
