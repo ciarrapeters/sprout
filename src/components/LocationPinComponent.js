@@ -1,9 +1,10 @@
 import React from 'react';
-import {location} from 'react-icons/io';
 
 const LocationPinComponent = ({text}) => {  
    return(
-        <location />
+        <span style={{color: `Tomato`}}>
+            <i class="fas fa fa-location-arrow fa-3x"></i>
+        </span>
     )
 }
 
