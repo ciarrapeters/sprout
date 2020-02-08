@@ -11,6 +11,8 @@ class HomeScreenContainer extends React.Component {
                 <PlayerStatusComponent/>
                 <AvatarContainer/>
                 <BoxListComponent/>
+                <button onClick={() => this.props.toggle('quiz')}>Quiz Page</button>
+                <button onClick={() => this.props.toggle('map')}>Map Page</button>
             </React.Fragment>
 		)
 	}
