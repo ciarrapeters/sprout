@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sprout Relationships
+## Nurturing existing relationships and cultivating new ones
 
-## Available Scripts
+## The Whole Story
 
-In the project directory, you can run:
+### Summary
+We created a progressive web app that helps users cultivate already-existing relationships and build new ones! Our app allows users to have an account with multiple friendships. Each friendship is different, and users can gain experience and level up by doing local activities with their friends, as well as taking quizzes on personal interests. All friends also get to fill out their preferences, and they get tested on your information! If you match on anything, the app suggests specific activities to do together that you both love. Doing quizzes gives the user experience points, and doing shared activities together gives both friends experience.
 
-### `npm start`
+Users can also customize their characters by purchasing new outfits from the Store. To customize their experience, users can also input their own shared activities if they have their own ideas for fun things to do with their friend!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Inspiration
+We realized that a lot of friendships we've made during college have begun to taper off as we all go different directions in our lives. We wanted to reconnect these friendships through an app that matches interests and offers shared experiences to reconnect and reinforce existing relationships.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### What we learned
+The User Experience designing portion is the most important aspect. Having a more clear goal / outline in the beginning of the creation process would have been a lot better. We ended up changing a lot of features and made new features to work with our idea and the narrative we wanted to tell for our app.
 
-### `npm test`
+### How we built it
+After the initial whiteboarding and brainstorming, we had a rough idea of what features we wanted to have, and working with mentors helped us solidify the need to tell a story with our demo. Based on this, we created multiple pages, first flowing from the main page that shows the current relationship the user is looking at, and going to shared quizzes to find common activities, and then further to suggest activities. We tried to build the full experience that we would want users to have with our application by adding incentive to get money to buy things in the shop and customize your character.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Challenges
+Designing experiences is difficult: Instead of just pushing features, we were constantly having to think about how we want people to use the app, not just what it does. Lots of storyboarding.
 
-### `npm run build`
+CSS is not something to be taken lightly: At least double the time you’re expecting to spend on just design.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Ideas
+Multiple-Relationship activities:
+Sometimes entire friend groups want to get together and do something fun! If everyone is on Sprout, we can provide suggestions across multiple relationships
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Further customization:
+While we do offer a basic cosmetics store, having further customization options to express your unique personality like pets, professions, and vehicles!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Commercialization:
+We want to do everything we can to give back to the local community - hopefully teaming up with them for discounts on particular activities.
 
-### `npm run eject`
+Memory Books:
+If you opt-in, we’ll keep track of all the activities you and your friend log to remind you about years down the line.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Introduce new Friends:
+Based on your interests and those with similar interests in your area we can begin to introduce potential friends you’d really get along with
