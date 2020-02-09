@@ -57,13 +57,13 @@ class HomeScreenContainer extends React.Component {
                         {
                             this.props.notificationState === 1 &&
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('quiz')}>Take a Quiz!</button>
+                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('quiz')}>A new Quiz is available! Test your friends!</button>
                             </div>
                         }
                         {
                             this.props.notificationState === 2 &&
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('map')}>New Suggestion!</button>
+                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('map')}>Luke also likes Museums! Here's an idea...</button>
                             </div>
                         }
 						
