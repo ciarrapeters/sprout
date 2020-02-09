@@ -62,7 +62,7 @@ class BoxList extends React.Component {
 	render() {
 			return(
         <div className="container">
-          <ul className="list-group list-group-flush" style={{height: '300px'}}>
+          <ul className="list-group list-group-flush" style={{height: '350px'}}>
               { this.props.mapActivities.map((activity,i) => {
                   return <li className="hackbean-light-blue list-group-item" onClick={() => { this.removeMapItem(activity, i)}} key={i}>{ activity }</li>
               })}

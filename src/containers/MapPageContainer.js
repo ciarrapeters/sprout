@@ -58,7 +58,7 @@ class MapPageContainer extends React.Component {
                             <Card.Text>
                                 The Isabella Stewart Gardner Museum is an art museum in Boston, Massachusetts, which houses significant examples of European, Asian, and American art. Its collection includes paintings, sculpture, tapestries, and decorative arts
                             </Card.Text>
-                            <Button variant="primary" onClick={() => this.addActivityTrigger()}>Add to Activity List</Button>
+                            <Button className="hackbean-dark-green" onClick={() => this.addActivityTrigger()}>Add to Activity List</Button>
                         </Card.Body>
                     </Card>
                 </div>

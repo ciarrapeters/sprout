@@ -24,6 +24,7 @@ class AvatarContainer extends React.Component {
 						<AvatarInfoComponent player={this.props.player2}/>
 					</div>
 				</div>
+				<span className="m-5">3</span>
 				<button className="btn hackbean-dark-green" style={{color: 'white'}} onClick={() => this.props.toggle('shop')}><MdShoppingCart size={32}/></button>
 			</div>
 		)

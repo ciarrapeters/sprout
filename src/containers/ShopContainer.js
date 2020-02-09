@@ -15,16 +15,16 @@ const foodList = [taco, sushi, pizza, chinese, movies, museum]
 
 class ShopContainer extends React.Component {
 	constructor(props) {
-    super(props);
-    this.state = {values: []};
-	this.onPick = this.onPick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+	    super(props);
+	    this.state = {values: []};
+		this.onPick = this.onPick.bind(this);
+	    this.handleChange = this.handleChange.bind(this);
+	    this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	
 	handleChange(event) {
-	console.log(event.target.value)
-    this.setState({value: event.target.value});
+		console.log(event.target.value)
+	    this.setState({value: event.target.value});
 	}
 	
 	handleSubmit(event) {
@@ -33,7 +33,7 @@ class ShopContainer extends React.Component {
 		this.props.toggle('home');
 	}
 	onPick(image) {
-    this.setState({image});
+    	this.setState({image});
 	}
 	
 	render() {
@@ -55,7 +55,7 @@ class ShopContainer extends React.Component {
 							onPick={this.onPick}
 							onChange={this.handleChange} />
 
-					<button type="submit" class="btn btn-outline-info">Purchase</button>
+					<button type="submit" className="btn hackbean-dark-green text-white">Purchase</button>
 				</form>
 			</div>
 

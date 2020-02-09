@@ -1,6 +1,7 @@
 import React from 'react';
 import AvatarContainer from './AvatarContainer';
 import BoxListComponent from '../components/BoxListComponent';
+import leaf from '../images/leaf.png';
 
 class HomeScreenContainer extends React.Component {
 
@@ -55,13 +56,13 @@ class HomeScreenContainer extends React.Component {
 							1
 						</button>
                         {
-                            this.props.notificationState === 1 &&
+                            this.props.notificationState === 2 &&
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('quiz')}>A new Quiz is available! Test your friends!</button>
+                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('quiz')}>A new Quiz is available!</button>
                             </div>
                         }
                         {
-                            this.props.notificationState === 2 &&
+                            this.props.notificationState === 3 &&
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                 <button className="dropdown-item" href="#" onClick={() => this.props.toggle('map')}>Luke also likes Museums! Here's an idea...</button>
                             </div>
@@ -80,7 +81,10 @@ class HomeScreenContainer extends React.Component {
                     activities={this.props.activities} 
                     addMapActivity={this.props.addMapActivity}
                     removeMapActivity={this.props.removeMapActivity} />
+
+                <footer><img src={leaf} style={{width: '50px'}}/></footer>
             </div>
+            
 		)
 	}
 }

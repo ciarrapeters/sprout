@@ -7,8 +7,8 @@ class StatusBarComponent extends React.Component {
 		return (
             <React.Fragment>
                 <div style={{ width: 140 }}>
-				<ProgressBar now={this.props.filled / this.props.total * 100} variant={this.props.color}/>
-			</div>
+					<ProgressBar now={this.props.filled / this.props.total * 100} variant={this.props.color} label={this.props.label} />
+				</div>
             </React.Fragment>
 		)
 	}

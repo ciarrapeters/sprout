@@ -37,22 +37,21 @@ class MainViewContainer extends React.Component {
             if (nextPage === 'quiz') {
                 return ({
                     layout: 'quiz',
-                    notificationState: 1
+                    notificationState: 2
                 })
             } else if (nextPage === 'map') {
                 return ({
                     layout: 'map',
-                    notificationState: 2
+                    notificationState: 3
                 })
             } else if (nextPage === 'shop') {
                 return ({
                     layout: 'shop',
-                    notificationState: 2
+                    notificationState: 3
                 })
             } else if (nextPage === 'landing') {
                 return ({
-                    layout: 'landing',
-                    notificationState: 2
+                    layout: 'landing'
                 })
             } else {
                 return ({
