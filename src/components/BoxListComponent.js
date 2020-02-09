@@ -30,7 +30,7 @@ class BoxListComponent extends React.Component {
         <React.Fragment>
         <div className="container">
           <div className="hackbean-light-green" style={{paddingBottom: '10px'}}>
-            <h3>Activities</h3>
+            <h4>Activities</h4>
             <BoxList 
               mapActivities={this.props.activities} 
               activities={this.state.activities} 
@@ -38,10 +38,10 @@ class BoxListComponent extends React.Component {
             <div className="container">
 						<form onSubmit = {(e) => this.addActivity(e)}>
 							<div className="input-group">
-								<input type="text" className="form-control" id="inputActivity" placeholder="Activity" value={this.state.text}
+								<input type="text" className="form-control" id="inputActivity" placeholder="Pick up trash..." value={this.state.text}
 											onChange={(e) => {this.updateValue(e)}}/>
 								<span className="input-group-btn">
-									<button type="submit" className="btn hackbean-dark-green">Add activity</button>
+									<button type="submit" className="btn hackbean-dark-green text-white">Add activity</button>
 								</span>
               </div>
 						</form> 
