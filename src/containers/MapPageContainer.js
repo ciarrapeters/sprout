@@ -10,6 +10,10 @@ class MapPageContainer extends React.Component {
         zoom: 12
      }
 
+     addActivityTrigger() {
+        this.props.addActivity('Go to Isabella Stewart Gardner Museum');
+        this.props.toggle('home');
+     }
      //the center coordinates are NYC. I chose 12 as the zoom because it didn’t seem too far away or too close. 
      //The higher the number you choose, the more you zoom in on the map.
 	render() {
@@ -45,7 +49,7 @@ class MapPageContainer extends React.Component {
                             <Card.Text>
                                 A quiet place of reflection with art that has defined a generation. Help me I'm stuck in a machine
                             </Card.Text>
-                            <Button variant="primary">Add to Activity List</Button>
+                            <Button variant="primary" onClick={() => this.addActivityTrigger()}>Add to Activity List</Button>
                         </Card.Body>
                     </Card>
                 </div>

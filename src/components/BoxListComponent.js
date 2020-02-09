@@ -6,6 +6,7 @@ class BoxListComponent extends React.Component {
     super(props);
     this.state = { activities: [], text: '' };
     this.removeActivity = this.removeActivity.bind(this);
+    this.removeMapActivity = this.removeMapActivity.bind(this);
   }
 
   addActivity(e) {
@@ -25,6 +26,11 @@ class BoxListComponent extends React.Component {
       });
   }
 
+  removeMapActivity(name, i){
+      this.props.updatePlayer(0, 10, false);
+      this.props.removeMapActivity(name, i);
+  }
+
   updateValue(e) {
       this.setState({ text: e.target.value})
   }
@@ -32,7 +38,12 @@ class BoxListComponent extends React.Component {
   render() {
       return(
           <div>
-						<BoxList activities={this.state.activities} removeActivity={this.removeActivity}/>
+            <BoxList 
+              mapActivities={this.props.activities} 
+              activities={this.state.activities} 
+              removeMapActivity={this.removeMapActivity} 
+              removeActivity={this.removeActivity}
+            />
 						<form onSubmit = {(e) => this.addActivity(e)}>
 							<div className="input-group">
 							<div className="col-sm-6">
@@ -53,12 +64,18 @@ class BoxList extends React.Component {
 
 	removeItem(item, i) {
 			this.props.removeActivity(item, i);
-	}
+  }
+  
+  removeMapItem(item, i) {
+    this.props.removeMapActivity(item, i);
+  }
 
 	render() {
 			return(
 					<ul>
-						
+              { this.props.mapActivities.map((activity,i) => {
+									return <p onClick={() => { this.removeMapItem(activity, i)}} key={i}>{ activity }</p>
+							})}
 							{ this.props.activities.map((activity,i) => {
 									return <p onClick={() => { this.removeItem(activity, i)}} key={i}>{ activity }</p>
 							})}
