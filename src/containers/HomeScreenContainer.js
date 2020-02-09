@@ -42,7 +42,20 @@ class HomeScreenContainer extends React.Component {
                 currentHealth: !singlePlayer ? prevState.player2.currentHealth + healthChange : prevState.player2.currentHealth
             }
         }));
-	}
+    }
+    
+    renderNotificationButton() {
+        const alarm = this.props.notificationState === 2 || this.props.notificationState === 3 
+        ? 
+        <button className="fas fa fa-bell badge badge-pill badge-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        1
+        </button>
+        :
+        <button className="fas fa fa-bell badge badge-pill hackbean-dark-green" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        0
+        </button>
+        return alarm;
+    }
 
 	render() {
 		return (
@@ -52,9 +65,7 @@ class HomeScreenContainer extends React.Component {
 		                Your relationship with Luke
 		            </span>
 					<div className="dropdown">
-						<button className="fas fa fa-bell badge badge-pill badge-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							1
-						</button>
+						{this.renderNotificationButton()}
                         {
                             this.props.notificationState === 2 &&
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
@@ -82,7 +93,7 @@ class HomeScreenContainer extends React.Component {
                     addMapActivity={this.props.addMapActivity}
                     removeMapActivity={this.props.removeMapActivity} />
 
-                <footer><img src={leaf} style={{width: '50px'}}/></footer>
+                <footer><img src={leaf} style={{width: '50px'}} alt=""/></footer>
             </div>
             
 		)

@@ -33,6 +33,7 @@ class QuizPageContainer extends React.Component {
 	handleSubmit(event) {
     // alert('Your food choice is: ' + this.state.value);
 		event.preventDefault();
+		this.props.addMapActivity('Finished A Quiz!', 5, true);
 		this.props.toggle('home');
 	}
 	onPick(image) {

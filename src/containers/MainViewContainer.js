@@ -26,9 +26,14 @@ class MainViewContainer extends React.Component {
 		});
 	}
 
-	addActivity(activity) {
+	addActivity(activity, exp, single) {
+        const fullActivity = {
+            activity,
+            exp,
+            single
+        };
 		this.setState({ 
-		  activities: [ activity, ...this.state.activities ],
+		  activities: [ fullActivity, ...this.state.activities ],
 		});
 	}
 
@@ -78,6 +83,7 @@ class MainViewContainer extends React.Component {
                         this.state.layout === 'quiz' &&
                         <QuizPageContainer
                             toggle={this.toggle}
+                            addMapActivity={this.addActivity}
                             notificationState={this.state.notificationState}/>
                     }
                     {
