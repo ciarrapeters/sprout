@@ -1,15 +1,15 @@
 import React from 'react';
 import AvatarInfoComponent from '../components/AvatarInfoComponent';
 import AvatarComponent from '../components/AvatarComponent';
-import Avatar1 from '../images/Avatar1.png'; // Tell Webpack this JS file uses this image
-import Avatar2 from '../images/Avatar2.png'; // Tell Webpack this JS file uses this image
-
+import Avatar1 from '../images/CIARRADAB.png'; // Tell Webpack this JS file uses this image
+import Avatar2 from '../images/LUKEDANCE.jpg'; // Tell Webpack this JS file uses this image
+import { MdShoppingCart } from "react-icons/md";
 
 class AvatarContainer extends React.Component {
 
   render() {
 		return (
-			<React.Fragment>
+			<div className="my-4">
 				<div className="d-flex flex-row">
 					<div className="col-2" style={{transform: 'translate(75px, 50px) rotate(270deg)'}}>
 						<AvatarInfoComponent player={this.props.player1}/>
@@ -24,8 +24,8 @@ class AvatarContainer extends React.Component {
 						<AvatarInfoComponent player={this.props.player2}/>
 					</div>
 				</div>
-				
-			</React.Fragment>
+				<button className="btn hackbean-dark-green" style={{color: 'white'}} onClick={() => this.props.toggle('shop')}><MdShoppingCart size={32}/></button>
+			</div>
 		)
 	}
 }

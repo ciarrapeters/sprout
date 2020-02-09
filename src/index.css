@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hackbean-light-blue {
+	background-color: #ECFFFD !important;
+}
+
+.hackbean-light-green {
+	background-color: #B9F6CA !important;
+}
+
+.hackbean-dark-green {
+	background-color: #00B686 !important;
+}
+
+.progress-bar-purple {
+      background-color: purple !important;
+}

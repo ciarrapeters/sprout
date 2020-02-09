@@ -2,6 +2,7 @@ import React from 'react';
 import HomeScreenContainer from './HomeScreenContainer';
 import QuizPageContainer from './QuizPageContainer';
 import MapPageContainer from './MapPageContainer';
+import ShopContainer from './ShopContainer';
 
 class MainViewContainer extends React.Component {
 
@@ -42,6 +43,11 @@ class MainViewContainer extends React.Component {
                     layout: 'map',
                     notificationState: 0
                 })
+            } else if (nextPage === 'shop') {
+                return ({
+                    layout: 'shop',
+                    notificationState: 0
+                })
             } else {
                 return ({
                     layout: 'home',
@@ -53,13 +59,13 @@ class MainViewContainer extends React.Component {
 	render() {
 		return (
 		<React.Fragment>
-				<div className="bg-light">
+				<div className="hackbean-light">
 			        {
                         this.state.layout === 'home' &&
                         <HomeScreenContainer
                             toggle={this.toggle}
 							activities={this.state.activities}
-                            removeMapActivity={this.removeActivity}
+							removeMapActivity={this.removeActivity}
                             addMapActivity={this.addActivity}
                             notificationState={this.state.notificationState} />
                     }
@@ -74,6 +80,13 @@ class MainViewContainer extends React.Component {
                         <MapPageContainer
                             toggle={this.toggle}
 							addActivity={this.addActivity}
+                            notificationState={this.state.notificationState}/>
+                    }
+                    {
+                        this.state.layout === 'shop' &&
+                        <ShopContainer
+                            toggle={this.toggle}
+                            addActivity={this.addActivity}
                             notificationState={this.state.notificationState}/>
                     }
 				</div>

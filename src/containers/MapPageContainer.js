@@ -19,12 +19,12 @@ class MapPageContainer extends React.Component {
 	render() {
 		return (
             <React.Fragment>
-            	<nav className="navbar navbar-expand-sm navbar-dark bg-success">
+            	<nav className="navbar navbar-expand-sm navbar-dark hackbean-dark-green">
 		            <button onClick={() => this.props.toggle('home')}
 							className="text-secondary btn fas fa fa-times">
 		            </button>
 		            <span className="navbar-brand">
-		                Ciarra and Luke
+		                Your relationship with Luke
 		            </span>
 		        </nav>
 		        <div className="container">
