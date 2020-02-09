@@ -3,7 +3,10 @@ import React from 'react';
 class AvatarComponent extends React.Component {
   render() {
 		return (
-            <img src={this.props.avatar} alt="" className="img-fluid"/>
+			<React.Fragment>
+				<h5>Lv. {this.props.currentLevel}</h5>
+				<img src={this.props.avatar} alt="" className="img-fluid" style={{width: "1000px"}}/>
+			</React.Fragment>
 		)
 	}
 }

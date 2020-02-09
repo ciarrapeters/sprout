@@ -59,7 +59,8 @@ class MainViewContainer extends React.Component {
                         <HomeScreenContainer
                             toggle={this.toggle}
 							activities={this.state.activities}
-							removeMapActivity={this.removeActivity}
+                            removeMapActivity={this.removeActivity}
+                            addMapActivity={this.addActivity}
                             notificationState={this.state.notificationState} />
                     }
                     {
