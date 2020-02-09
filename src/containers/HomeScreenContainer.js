@@ -47,11 +47,32 @@ class HomeScreenContainer extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+			    <nav className="navbar navbar-expand-sm navbar-dark bg-success">
+		            <span className="navbar-brand">
+		                Ciarra and Luke
+		            </span>
+					<div className="dropdown">
+						<button className="fas fa fa-bell badge badge-pill badge-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							1
+						</button>
+                        {
+                            this.props.notificationState === 1 &&
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('quiz')}>Take a Quiz!</button>
+                            </div>
+                        }
+                        {
+                            this.props.notificationState === 2 &&
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <button className="dropdown-item" href="#" onClick={() => this.props.toggle('map')}>New Suggestion!</button>
+                            </div>
+                        }
+						
+					</div>
+		        </nav>
                 <PlayerStatusComponent/>
                 <AvatarContainer player1={this.state.player1} player2={this.state.player2} updatePlayer={this.updatePlayer}/>
                 <BoxListComponent updatePlayer={this.updatePlayer} activities={this.props.activities} removeMapActivity={this.props.removeMapActivity} />
-                <button onClick={() => this.props.toggle('quiz')}>Quiz Page</button>
-                <button onClick={() => this.props.toggle('map')}>Map Page</button>
             </React.Fragment>
 		)
 	}

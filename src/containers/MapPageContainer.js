@@ -19,6 +19,15 @@ class MapPageContainer extends React.Component {
 	render() {
 		return (
             <React.Fragment>
+            	<nav className="navbar navbar-expand-sm navbar-dark bg-success">
+		            <button onClick={() => this.props.toggle('home')}
+							className="text-secondary btn fas fa fa-times">
+		            </button>
+		            <span className="navbar-brand">
+		                Ciarra and Luke
+		            </span>
+		        </nav>
+		        <div className="container">
                 <div className="row">
                     <div style={{height: `12em`, width: `1em`}} className="col">
                         <GoogleMapReact 
@@ -47,11 +56,12 @@ class MapPageContainer extends React.Component {
                         <Card.Body>
                             <Card.Title>Isabella Stewart Gardener Museum</Card.Title>
                             <Card.Text>
-                                A quiet place of reflection with art that has defined a generation. Help me I'm stuck in a machine
+                                A quiet place of reflection with art that has defined a generation. Help me Im stuck in a machine
                             </Card.Text>
                             <Button variant="primary" onClick={() => this.addActivityTrigger()}>Add to Activity List</Button>
                         </Card.Body>
                     </Card>
+                </div>
                 </div>
             </React.Fragment>
 		)
