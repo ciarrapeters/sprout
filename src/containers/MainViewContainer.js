@@ -2,6 +2,8 @@ import React from 'react';
 import HomeScreenContainer from './HomeScreenContainer';
 import QuizPageContainer from './QuizPageContainer';
 import MapPageContainer from './MapPageContainer';
+import ShopContainer from './ShopContainer';
+import LandingPageContainer from './LandingPageContainer';
 
 class MainViewContainer extends React.Component {
 
@@ -11,7 +13,7 @@ class MainViewContainer extends React.Component {
 		this.addActivity = this.addActivity.bind(this);
 	}
 	state = {
-		layout: 'home', // Can have home; map; quiz
+		layout: 'landing', // Can have home; map; quiz
 		activities: [],
         notificationState: 1
     }
@@ -35,12 +37,21 @@ class MainViewContainer extends React.Component {
             if (nextPage === 'quiz') {
                 return ({
                     layout: 'quiz',
-                    notificationState: 1
+                    notificationState: 2
                 })
             } else if (nextPage === 'map') {
                 return ({
                     layout: 'map',
-                    notificationState: 0
+                    notificationState: 3
+                })
+            } else if (nextPage === 'shop') {
+                return ({
+                    layout: 'shop',
+                    notificationState: 3
+                })
+            } else if (nextPage === 'landing') {
+                return ({
+                    layout: 'landing'
                 })
             } else {
                 return ({
@@ -53,13 +64,13 @@ class MainViewContainer extends React.Component {
 	render() {
 		return (
 		<React.Fragment>
-				<div className="bg-light">
+				<div className="hackbean-light">
 			        {
                         this.state.layout === 'home' &&
                         <HomeScreenContainer
                             toggle={this.toggle}
 							activities={this.state.activities}
-                            removeMapActivity={this.removeActivity}
+							removeMapActivity={this.removeActivity}
                             addMapActivity={this.addActivity}
                             notificationState={this.state.notificationState} />
                     }
@@ -74,6 +85,18 @@ class MainViewContainer extends React.Component {
                         <MapPageContainer
                             toggle={this.toggle}
 							addActivity={this.addActivity}
+                            notificationState={this.state.notificationState}/>
+                    }
+                    {
+                        this.state.layout === 'landing' &&
+                        <LandingPageContainer
+                            toggle={this.toggle}/>
+                    }
+                    {
+                        this.state.layout === 'shop' &&
+                        <ShopContainer
+                            toggle={this.toggle}
+                            addActivity={this.addActivity}
                             notificationState={this.state.notificationState}/>
                     }
 				</div>

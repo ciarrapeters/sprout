@@ -42,12 +42,12 @@ class QuizPageContainer extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-			<nav className="navbar navbar-expand-sm navbar-dark bg-success">
+			<nav className="navbar navbar-expand-sm navbar-dark hackbean-dark-green">
 	            <button onClick={() => this.props.toggle('home')}
 						className="text-secondary btn fas fa fa-times wbdv-course-editor wbdv-close">
 	            </button>
 	            <span className="navbar-brand">
-	                Ciarra and Luke
+	                Your relationship with Luke
 	            </span>
 	        </nav>
 	
@@ -55,22 +55,22 @@ class QuizPageContainer extends React.Component {
 
 			<form onSubmit={this.handleSubmit}>
 			<h4>What's your favorite food?</h4>
-			<div>
-        <ImagePicker 
-          images={foodList.map((image, i) => ({src: image, value: i}))}
-					onPick={this.onPick}
-					onChange={this.handleChange}
-        />
-      </div>
+			<div className="container">
+		        <ImagePicker 
+		          images={foodList.map((image, i) => ({src: image, value: i}))}
+							onPick={this.onPick}
+							onChange={this.handleChange}
+		        />
+		    </div>
 
 			<h4>What's your favorite activity?</h4>
-			<div>
-        <ImagePicker 
-          images={activityList.map((image, i) => ({src: image, value: i}))}
-          onPick={this.onPick}
-        />
-      </div>
-			<button type="submit" class="btn btn-outline-info">Submit!</button>
+			<div className="container">
+		        <ImagePicker 
+		          images={activityList.map((image, i) => ({src: image, value: i}))}
+		          onPick={this.onPick}
+		        />
+		     </div>
+			<button type="submit" className="btn hackbean-dark-green text-white">Submit!</button>
 			</form>
 			</React.Fragment>
 			
