@@ -22,6 +22,14 @@ class QuizPageContainer extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+			<nav className="navbar navbar-expand-sm navbar-dark bg-success">
+	            <button onClick={() => this.props.toggle('home')}
+						className="text-secondary btn fas fa fa-times wbdv-course-editor wbdv-close">
+	            </button>
+	            <span className="navbar-brand">
+	                Ciarra and Luke
+	            </span>
+	        </nav>
 			<h2>Take this quiz to find common interests with your friend!</h2>
 			<form onSubmit={this.handleSubmit}>
 			<label>Pick your favorite food:</label>
@@ -48,7 +56,6 @@ class QuizPageContainer extends React.Component {
 			
 			<button type="submit" class="btn btn-primary">Submit!</button>
 			</form>
-		
 			</React.Fragment>
 			
 		)

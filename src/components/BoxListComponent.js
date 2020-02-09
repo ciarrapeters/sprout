@@ -37,23 +37,20 @@ class BoxListComponent extends React.Component {
 
   render() {
       return(
-          <div>
+          <div className="container">
             <BoxList 
               mapActivities={this.props.activities} 
               activities={this.state.activities} 
               removeMapActivity={this.removeMapActivity} 
-              removeActivity={this.removeActivity}
-            />
+              removeActivity={this.removeActivity} />
 						<form onSubmit = {(e) => this.addActivity(e)}>
 							<div className="input-group">
-							<div className="col-sm-6">
 								<input type="text" className="form-control" id="inputActivity" placeholder="Activity" value={this.state.text}
 											onChange={(e) => {this.updateValue(e)}}/>
-								</div>
 								<span className="input-group-btn">
 									<button type="submit" className="btn btn-primary">Add activity</button>
 								</span>
-							</div>
+              </div>
 						</form> 
           </div>
       );
@@ -72,14 +69,13 @@ class BoxList extends React.Component {
 
 	render() {
 			return(
-					<ul>
+					<ul className="list-group list-group-flush">
               { this.props.mapActivities.map((activity,i) => {
-									return <p onClick={() => { this.removeMapItem(activity, i)}} key={i}>{ activity }</p>
-							})}
-							{ this.props.activities.map((activity,i) => {
-									return <p onClick={() => { this.removeItem(activity, i)}} key={i}>{ activity }</p>
-							})}
-						
+                  return <li className="list-group-item bg-light" onClick={() => { this.removeMapItem(activity, i)}} key={i}>{ activity }</li>
+              })}
+              { this.props.activities.map((activity,i) => {
+                  return <li className="list-group-item bg-light" onClick={() => { this.removeItem(activity, i)}} key={i}>{ activity }</li>
+              })}
 					</ul>
 			);
 	}

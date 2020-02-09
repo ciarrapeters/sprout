@@ -12,7 +12,8 @@ class MainViewContainer extends React.Component {
 	}
 	state = {
 		layout: 'home', // Can have home; map; quiz
-		activities: []
+		activities: [],
+        notificationState: 1
     }
 	//required for map activities
 	removeActivity(name, i){
@@ -33,47 +34,49 @@ class MainViewContainer extends React.Component {
         this.setState(prevState => {
             if (nextPage === 'quiz') {
                 return ({
-                    layout: 'quiz'
+                    layout: 'quiz',
+                    notificationState: 1
                 })
             } else if (nextPage === 'map') {
                 return ({
-                    layout: 'map'
+                    layout: 'map',
+                    notificationState: 0
                 })
             } else {
                 return ({
-                    layout: 'home'
+                    layout: 'home',
+                    notificationState: this.state.notificationState + 1
             	})
             }
         })
 
 	render() {
 		return (
-			<div className="row">
-				<div className="col-sm-3"></div>
-				<div className="container bg-light col-sm-6">
-			        {	
-                        this.state.layout === 'home' &&	
+		<React.Fragment>
+				<div className="bg-light">
+			        {
+                        this.state.layout === 'home' &&
                         <HomeScreenContainer
                             toggle={this.toggle}
 							activities={this.state.activities}
 							removeMapActivity={this.removeActivity}
-						/>
+                            notificationState={this.state.notificationState} />
                     }
-                    {	
-                        this.state.layout === 'quiz' &&	
+                    {
+                        this.state.layout === 'quiz' &&
                         <QuizPageContainer
-                            toggle={this.toggle}/>
+                            toggle={this.toggle}
+                            notificationState={this.state.notificationState}/>
                     }
-                    {	
-                        this.state.layout === 'map' &&	
+                    {
+                        this.state.layout === 'map' &&
                         <MapPageContainer
                             toggle={this.toggle}
 							addActivity={this.addActivity}
-						/>
+                            notificationState={this.state.notificationState}/>
                     }
 				</div>
-				<div className="col-sm-3"></div>
-			</div>
+		</React.Fragment>
 		)
 	}
 }
