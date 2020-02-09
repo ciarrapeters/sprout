@@ -27,12 +27,16 @@ class BoxListComponent extends React.Component {
 
   render() {
       return(
-          <div className="container">
+        <React.Fragment>
+        <div className="container">
+          <div style={{backgroundColor: 'red', paddingBottom: '10px'}}>
+            <h3>Activities</h3>
             <BoxList 
               mapActivities={this.props.activities} 
               activities={this.state.activities} 
               removeMapActivity={this.removeMapActivity} 
             />
+            <div class="container">
 						<form onSubmit = {(e) => this.addActivity(e)}>
 							<div className="input-group">
 								<input type="text" className="form-control" id="inputActivity" placeholder="Activity" value={this.state.text}
@@ -42,7 +46,10 @@ class BoxListComponent extends React.Component {
 								</span>
               </div>
 						</form> 
+            </div>
           </div>
+          </div>
+          </React.Fragment>
       );
   }
 }
@@ -55,11 +62,13 @@ class BoxList extends React.Component {
 
 	render() {
 			return(
-					<ul className="list-group list-group-flush">
+        <div className="container">
+          <ul className="list-group list-group-flush" style={{height: '300px'}}>
               { this.props.mapActivities.map((activity,i) => {
                   return <li className="list-group-item bg-light" onClick={() => { this.removeMapItem(activity, i)}} key={i}>{ activity }</li>
               })}
 					</ul>
+          </div>
 			);
 	}
 }

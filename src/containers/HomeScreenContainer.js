@@ -45,7 +45,7 @@ class HomeScreenContainer extends React.Component {
 
 	render() {
 		return (
-			<React.Fragment>
+			<div>
 			    <nav className="navbar navbar-expand-sm navbar-dark bg-success">
 		            <span className="navbar-brand">
 		                Ciarra and Luke
@@ -79,9 +79,9 @@ class HomeScreenContainer extends React.Component {
                     updatePlayer={this.updatePlayer} 
                     activities={this.props.activities} 
                     addMapActivity={this.props.addMapActivity}
-                    removeMapActivity={this.props.removeMapActivity} 
+                    removeMapActivity={this.props.removeMapActivity}
                 />
-            </React.Fragment>
+            </div>
 		)
 	}
 }
