@@ -19,6 +19,7 @@ class BoxListComponent extends React.Component {
   removeActivity(name, i){
       let activities = this.state.activities.slice();
       activities.splice(i, 1);
+      this.props.updatePlayer(0, 10, false);
       this.setState({
           activities
       });
@@ -30,30 +31,20 @@ class BoxListComponent extends React.Component {
 
   render() {
       return(
-				
           <div>
-						
 						<BoxList activities={this.state.activities} removeActivity={this.removeActivity}/>
 						<form onSubmit = {(e) => this.addActivity(e)}>
-					
-							<div class="input-group">
+							<div className="input-group">
 							<div className="col-sm-6">
-								<input type="text" class="form-control" id="inputActivity" placeholder="Activity" value={this.state.text}
+								<input type="text" className="form-control" id="inputActivity" placeholder="Activity" value={this.state.text}
 											onChange={(e) => {this.updateValue(e)}}/>
 								</div>
-			
-				
-								<span class="input-group-btn">
-									<button type="button" class="btn btn-primary">Add activity</button>
+								<span className="input-group-btn">
+									<button type="submit" className="btn btn-primary">Add activity</button>
 								</span>
-
 							</div>
-							
-
 						</form> 
-				
           </div>
-			
       );
   }
 }
