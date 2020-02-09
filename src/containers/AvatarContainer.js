@@ -10,8 +10,6 @@ class AvatarContainer extends React.Component {
   render() {
 		return (
 			<React.Fragment>
-				<h1>Hi from Avatar Container!</h1>
-				<button onClick={() => this.props.updatePlayer(0, 10, false)}>CLICK ME</button>
 				<div className="d-flex flex-row">
 					<div className="col-2" style={{transform: 'translate(75px, 50px) rotate(270deg)'}}>
 						<AvatarInfoComponent player={this.props.player1}/>

@@ -1,6 +1,5 @@
 import React from 'react';
 import AvatarContainer from './AvatarContainer';
-import PlayerStatusComponent from '../components/PlayerStatusComponent';
 import BoxListComponent from '../components/BoxListComponent';
 
 class HomeScreenContainer extends React.Component {
@@ -57,32 +56,30 @@ class HomeScreenContainer extends React.Component {
 						</button>
                         {
                             this.props.notificationState === 1 &&
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                 <button className="dropdown-item" href="#" onClick={() => this.props.toggle('quiz')}>Take a Quiz!</button>
                             </div>
                         }
                         {
                             this.props.notificationState === 2 &&
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                 <button className="dropdown-item" href="#" onClick={() => this.props.toggle('map')}>New Suggestion!</button>
                             </div>
                         }
 						
 					</div>
 		        </nav>
-                <PlayerStatusComponent/>
                 <AvatarContainer 
                     player1={this.state.player1} 
                     player2={this.state.player2} 
                     updatePlayer={this.updatePlayer}
                 />
+                <div style={{paddingTop: '10px'}}></div>
                 <BoxListComponent 
                     updatePlayer={this.updatePlayer} 
                     activities={this.props.activities} 
                     removeMapActivity={this.props.removeMapActivity} 
                 />
-                <button onClick={() => this.props.toggle('quiz')}>Quiz Page</button>
-                <button onClick={() => this.props.toggle('map')}>Map Page</button>
             </React.Fragment>
 		)
 	}
