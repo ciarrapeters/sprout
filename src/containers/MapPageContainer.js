@@ -2,11 +2,11 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocationPinComponent from '../components/LocationPinComponent';
 import { Button, Card } from 'react-bootstrap';
-import locationPhoto from '../images/boston.jpg'
+import locationPhoto from '../images/gardner.jpg'
 
 class MapPageContainer extends React.Component {
     static defaultProps = {
-        center: {lat: 40.73, lng: -73.93}, 
+        center: {lat: 42.3387, lng: -71.0989}, 
         zoom: 12
      }
 
@@ -42,8 +42,8 @@ class MapPageContainer extends React.Component {
                             onChildMouseLeave={this.onChildMouseLeave}
                         >
                             <LocationPinComponent
-                                lat={40.73}
-                                lng={-73.93}
+                                lat={42.3387}
+                                lng={-71.0989}
                                 text={'You'}
                             />
                         </GoogleMapReact>
@@ -54,9 +54,9 @@ class MapPageContainer extends React.Component {
                     <Card className="col">
                         <Card.Img variant="top" src={locationPhoto} />
                         <Card.Body>
-                            <Card.Title>Isabella Stewart Gardener Museum</Card.Title>
+                            <Card.Title>Isabella Stewart Gardner Museum</Card.Title>
                             <Card.Text>
-                                A quiet place of reflection with art that has defined a generation. Help me Im stuck in a machine
+                                The Isabella Stewart Gardner Museum is an art museum in Boston, Massachusetts, which houses significant examples of European, Asian, and American art. Its collection includes paintings, sculpture, tapestries, and decorative arts
                             </Card.Text>
                             <Button variant="primary" onClick={() => this.addActivityTrigger()}>Add to Activity List</Button>
                         </Card.Body>
