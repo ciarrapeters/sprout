@@ -78,6 +78,7 @@ class HomeScreenContainer extends React.Component {
                 <BoxListComponent 
                     updatePlayer={this.updatePlayer} 
                     activities={this.props.activities} 
+                    addMapActivity={this.props.addMapActivity}
                     removeMapActivity={this.props.removeMapActivity} 
                 />
             </React.Fragment>
