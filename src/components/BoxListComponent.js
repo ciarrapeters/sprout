@@ -10,14 +10,14 @@ class BoxListComponent extends React.Component {
 
   addActivity(e) {
       e.preventDefault();
-      this.props.addMapActivity(this.state.text);
+      this.props.addMapActivity(this.state.text, 10, false);
       this.setState({ 
         text: ''
       });
   }
 
-  removeMapActivity(name, i){
-      this.props.updatePlayer(0, 10, false);
+  removeMapActivity(name, i, exp, single){
+      this.props.updatePlayer(0, exp, single);
       this.props.removeMapActivity(name, i);
   }
 
@@ -55,8 +55,8 @@ class BoxListComponent extends React.Component {
 
 class BoxList extends React.Component {
   
-  removeMapItem(item, i) {
-    this.props.removeMapActivity(item, i);
+  removeMapItem(item, i, exp, single) {
+    this.props.removeMapActivity(item, i, exp, single);
   }
 
 	render() {
@@ -64,7 +64,7 @@ class BoxList extends React.Component {
         <div className="container">
           <ul className="list-group list-group-flush" style={{height: '350px'}}>
               { this.props.mapActivities.map((activity,i) => {
-                  return <li className="hackbean-light-blue list-group-item" onClick={() => { this.removeMapItem(activity, i)}} key={i}>{ activity }</li>
+                  return <li className="hackbean-light-blue list-group-item" onClick={() => { this.removeMapItem(activity, i, activity.exp, activity.single)}} key={i}>{ activity.activity }</li>
               })}
 					</ul>
           </div>

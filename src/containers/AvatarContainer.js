@@ -4,6 +4,7 @@ import AvatarComponent from '../components/AvatarComponent';
 import Avatar1 from '../images/CIARRADAB.png'; // Tell Webpack this JS file uses this image
 import Avatar2 from '../images/LUKEDANCE.jpg'; // Tell Webpack this JS file uses this image
 import { MdShoppingCart } from "react-icons/md";
+import { GiTwoCoins } from "react-icons/gi";
 
 class AvatarContainer extends React.Component {
 
@@ -24,8 +25,14 @@ class AvatarContainer extends React.Component {
 						<AvatarInfoComponent player={this.props.player2}/>
 					</div>
 				</div>
-				<span className="m-5">3</span>
-				<button className="btn hackbean-dark-green" style={{color: 'white'}} onClick={() => this.props.toggle('shop')}><MdShoppingCart size={32}/></button>
+				<div className="row">
+					<div className="col-5 text-right">
+						<GiTwoCoins /> <span>375</span>
+					</div>
+					<div className="col text-left">
+						<button className="btn hackbean-dark-green" style={{color: 'white'}} onClick={() => this.props.toggle('shop')}><MdShoppingCart size={32}/></button>
+					</div>
+				</div>
 			</div>
 		)
 	}

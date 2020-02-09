@@ -11,7 +11,7 @@ class MapPageContainer extends React.Component {
      }
 
      addActivityTrigger() {
-        this.props.addActivity('Go to Isabella Stewart Gardner Museum');
+        this.props.addActivity('Go to Isabella Stewart Gardner Museum', 20, false);
         this.props.toggle('home');
      }
      //the center coordinates are NYC. I chose 12 as the zoom because it didn’t seem too far away or too close. 
